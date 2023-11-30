@@ -1,0 +1,55 @@
+<ion-app>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-content>
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <img src="assets/img/avatar.jpg">
+        <ion-label>
+          <h2>Hola! {{ nombreUsuario }}</h2>
+        </ion-label>
+      </div>
+      <ion-item>
+        <ion-label>Modo Oscuro</ion-label>
+        <ion-toggle slot="end" (ionChange)='toggleTheme($event)'></ion-toggle>
+      </ion-item>
+      <ion-list>
+        <ion-item lines="full">
+          <ion-icon slot="start" name="notifications-outline"></ion-icon>
+          <ion-label>
+            Notificaciones
+          </ion-label>
+          <ion-toggle slot="end" [checked]="false"></ion-toggle>
+        </ion-item>
+        <ion-item lines="full" detail>
+          <ion-icon slot="start" name="key-outline"></ion-icon>
+          <ion-label>
+            Recuperar Contraseña
+          </ion-label>
+        </ion-item>
+        <ion-item lines="full" detail>
+          <ion-icon slot="start" name="key-outline"></ion-icon>
+          <ion-label>
+            Soporte
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-item (click)="abrirMapa()">
+        <ion-icon slot="start" ios="map" md="map"></ion-icon>
+        <ion-label>Mapa</ion-label>
+      </ion-item>
+
+      <ion-item (click)="compartirApp()">
+        <ion-icon slot="start" ios="share" md="share"></ion-icon>
+        <ion-label>Compartir</ion-label>
+      </ion-item>
+
+      <ion-item (click)="cerrarSesion()">
+        <ion-icon slot="start" ios="exit" md="exit" color="danger"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+ 
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

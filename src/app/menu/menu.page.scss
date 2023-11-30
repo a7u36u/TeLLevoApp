@@ -1,0 +1,39 @@
+ion-content{
+    div{
+        margin-top: 2rem;
+        ion-avatar {
+            border-radius: 50%;
+            border: 1px solid rgb(42, 42, 42);
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+        ion-label {
+            display: block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            margin-top: 0.6rem;
+            text-transform: capitalize;
+        }
+    }
+    ion-list {
+        background: transparent;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+        ion-item {
+            --background: transparent;
+            --border-style: dashed;
+            --border-color: rgb(42, 42, 42);
+            --paddin-botom: 1rem;
+            --paddin-top: 1rem;
+            --paddin-start: 0;
+            --paddin-end: 0;
+            ion-toggle {
+                margin-right: -0.6rem;
+            }
+        }
+    }
+
+    ion-button {
+        margin-bottom: 10vh;
+    }
+}

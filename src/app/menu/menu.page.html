@@ -1,0 +1,73 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="rgb(42, 42, 42)">
+    <ion-title color="rgb(42, 42, 42)">Ajustes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="rgb(42, 42, 42)">
+  <div align="center">
+    <ion-avatar>
+      <img src="assets/img/avatar.jpg">
+    </ion-avatar>
+    <ion-label color="rgb(42, 42, 42)">{{ nombreUsuario }} </ion-label>
+  </div>
+
+  <ion-list>
+    <ion-item lines="full">
+      <ion-icon slot="start" name="notifications-outline"></ion-icon>
+      <ion-label>
+        Notificaciones
+      </ion-label>
+      <ion-toggle slot="end" [checked]="false"></ion-toggle>
+    </ion-item>
+    <ion-item lines="full" detail>
+      <ion-icon slot="start" name="key-outline"></ion-icon>
+      <ion-label>
+        Recuperar Contraseña
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" detail>
+      <ion-icon slot="start" name="key-outline"></ion-icon>
+      <ion-label>
+        Soporte
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <!-- <ion-item (click)="cerrarSesion()">
+    <ion-icon slot="start" ios="exit" md="exit"></ion-icon>
+    <ion-label>Cerrar Sesión</ion-label>
+  </ion-item> -->
+
+  <!-- <ion-button (click)="logout()" fill="clear" class="ion-margin" color="danger">
+    <ion-icon name="log-out" slot="start" ></ion-icon> Cerrar sesion
+  </ion-button>
+</ion-content>
+
+<ion-content>
+  Contenido de la página principal -->
+
+  <!-- <ion-button (click)="logout()">Cerrar sesión</ion-button>
+</ion-content> -->
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [routerLink]="['/home']" tab="home">
+      <ion-icon name="home"></ion-icon>
+      Inicio
+    </ion-tab-button>
+    <ion-tab-button [routerLink]="['/mapa']" tab="radio">
+      <ion-icon name="car"></ion-icon>
+      Viajes
+    </ion-tab-button>
+    <ion-tab-button tab="library">
+      <ion-icon name="book"></ion-icon>
+      Historial
+    </ion-tab-button>
+    <ion-tab-button [routerLink]="['/menu']" tab="search">
+      <ion-icon name="person"></ion-icon>
+      Cuenta
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
